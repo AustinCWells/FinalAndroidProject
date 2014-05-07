@@ -16,5 +16,15 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+    <style name="toggle">
+        <item name="android:textOn">Yes</item>
+        <item name="android:textOff">No</item>
+       
+    </style>
+    
+    <style name="text">
+        <item name="android:layout_marginLeft">1dip</item>
+    </style>
 
 </resources>

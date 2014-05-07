@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/anchorView"
+        android:layout_width="1dip"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/eventsOption"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/coffeeText"
+         style="@style/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/anchorView"
+        android:text="@string/coffeeText"
+		/>
+
+    <Switch
+        android:id="@+id/coffeeOption"
+        style="@style/toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/foodText"
+         style="@style/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/coffeeOption"
+        android:layout_toRightOf="@id/anchorView"
+        android:text="@string/foodText" />
+
+    <Switch
+        android:id="@+id/foodOption"
+        style="@style/toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/coffeeOption" 
+         android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/chainText"
+         style="@style/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chainText" />
+
+    <Switch
+        android:id="@+id/chainOption"
+        style="@style/toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/anchorView" />
+
+    <TextView
+        android:id="@+id/wifiText"
+         style="@style/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chainOption"
+        android:text="@string/wifiText" />
+
+    <Switch
+        android:id="@+id/wifiOption"
+        style="@style/toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chainOption"
+        android:layout_toLeftOf="@id/anchorView" />
+
+    <TextView
+        android:id="@+id/eventsText"
+         style="@style/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wifiOption"
+        android:text="@string/eventsText" />
+
+    <Switch
+        android:id="@+id/eventsOption"
+        style="@style/toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wifiOption" 
+        android:layout_toLeftOf="@id/anchorView"/>
+
+    <Spinner
+        android:id="@+id/atmosphereOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eventsOption" 
+        android:entries="@array/cost"/>
+
+    <Spinner
+        android:id="@+id/ratingOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/atmosphereOption"
+        android:entries="@array/rating" />
+
+    <Spinner
+        android:id="@+id/priceOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ratingOption"
+        android:entries="@array/atmosphere" />
+
+</RelativeLayout>

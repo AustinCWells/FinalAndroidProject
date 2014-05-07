@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="array_name">
+        <item>Array Item One</item>
+        <item>Array Item Two</item>
+        <item>Array Item Three</item>
+    </string-array>
+    
+    <string-array name="cost">
+        <item>$</item>
+        <item>$$</item>
+        <item>$$$</item>
+        <item>$$$$</item>
+        <item>$$$$$</item>
+     </string-array>
+     
+    <string-array name="atmosphere">
+        <item>cozy</item>
+        <item>modern</item>
+        <item>outdoors</item>
+    </string-array>
+    
+    <string-array name="rating">
+        <item>★☆☆☆</item>
+        <item>★★☆☆</item>
+        <item>★★★☆</item>
+        <item>★★★★</item>
+    </string-array>
+
+</resources>
