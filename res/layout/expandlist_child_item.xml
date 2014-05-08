@@ -11,7 +11,7 @@
         android:id="@+id/address"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/Black"
+        android:textColor="@color/White"
         android:textSize="17dip"
         android:drawableLeft="@drawable/map_white" 
           android:drawablePadding="10dip" />
@@ -20,7 +20,7 @@
         android:id="@+id/phone"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/Black"
+        android:textColor="@color/White"
         android:textSize="17dip" 
          android:drawableLeft="@drawable/phone_white"
          android:drawablePadding="10dip" />
@@ -29,7 +29,7 @@
         android:id="@+id/weekday_hours"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/Black"
+        android:textColor="@color/White"
         android:textSize="17dip"
          android:drawableLeft="@drawable/clock_white" 
            android:drawablePadding="10dip"  />
@@ -38,7 +38,7 @@
         android:id="@+id/rating"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/Black"
+        android:textColor="@color/White"
         android:textSize="17dip"
          android:drawableLeft="@drawable/star_white" 
            android:drawablePadding="10dip"  />
@@ -47,7 +47,7 @@
         android:id="@+id/price"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/Black"
+        android:textColor="@color/White"
         android:textSize="17dip"
          android:drawableLeft="@drawable/dollar_white" 
            android:drawablePadding="10dip"  />

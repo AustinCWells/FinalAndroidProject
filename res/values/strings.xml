@@ -60,9 +60,11 @@
     <string name="foodText"> Food </string>
     <string name="chainText"> Chain </string>
     <string name="wifiText"> Wifi </string>
+    <string name="all">All Locations</string>
     <string name="eventsText"> Events </string>
-    <color name="Black">#FFFFFFFF</color>
-    <color name="ExpandChildBackground">#FF7997B2</color>
-    <color name="ExpandGroupBackground">#FF3A5276</color>
+    <color name="Black">#FF000000</color>
+      <color name="White">#FFFFFFFF</color>
+    <color name="ExpandChildBackground">#F6A84E</color>
+    <color name="ExpandGroupBackground">#D3524A</color>
 
 </resources>

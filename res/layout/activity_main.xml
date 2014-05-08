@@ -3,16 +3,17 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF26149"
+    android:background="#FF212121"
     tools:context="com.example.androidfinal.MainActivity"
     tools:ignore="MergeRootFrame" >
 
-    <Button
-        android:id="@+id/GO"
-        android:layout_width="match_parent"
+    <ImageView 
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:text="@string/options" />
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        />
 
     <ProgressBar
         android:id="@+id/progressSpinner"
@@ -26,11 +27,38 @@
             android:id="@+id/ExpList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-             android:layout_below="@id/GO"
+             android:layout_below="@+id/allButton"
             android:groupIndicator="@null"
-            android:divider="@android:color/transparent"
-            android:dividerHeight="00.0sp" >
+            android:divider="@color/ExpandChildBackground"
+            android:dividerHeight="2.0sp" 
+            android:childDivider="#F6A84E"
+            android:padding="10dip"
+         	>
         </ExpandableListView>
 
+        <Button
+            android:id="@id/allButton"
+            android:layout_width="130dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/logo"
+            android:padding="10dip"
+            android:text="@string/all"
+            android:background="@drawable/button_style_two"
+            android:layout_marginRight="10dip" 
+            android:textColor="@color/White"
+            />
+
+        <Button
+            android:id="@+id/GO"
+            android:layout_width="130dip"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ExpList"
+            android:layout_alignParentLeft="true"
+            android:text="@string/options" 
+            android:background="@drawable/button_style_two"
+            android:layout_marginLeft="10dip"
+            android:textColor="@color/White"
+            />
 
 </RelativeLayout>

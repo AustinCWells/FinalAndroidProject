@@ -8,6 +8,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -44,6 +46,17 @@ public class MainActivity extends ActionBarActivity {
 		new loadJobsTask().execute();
 		
 		Button searchButton = (Button) findViewById(R.id.GO);
+		Button allButton = (Button) findViewById(R.id.allButton);
+		allButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(android.content.Intent.ACTION_VIEW, 
+					    Uri.parse("http://maps.google.com/maps?saddr=129OakleafDr"));
+					startActivity(intent);
+				//MainActivity.this.ExpAdapter.getFilter().filter("all");
+			}
+		});
 		searchButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -83,17 +96,7 @@ public class MainActivity extends ActionBarActivity {
 	}
 	
 	public void onOptionsSelected(Boolean chain, Boolean wifi, Boolean events, Boolean coffee, Boolean food, Integer cost, String atmosphere, Integer rating){
-		Log.i("ACW","on options selected" + chain.toString() + wifi.toString() + events.toString() + food.toString() + cost.toString() + atmosphere.toString() + rating.toString());
 		String constraints = chain.toString() + "|" + wifi.toString() + "|" + events.toString() + "|" + food.toString() + "|" + cost.toString() + "|" + atmosphere.toString() + "|" + rating.toString();
-		
-		
-		StringTokenizer st = new StringTokenizer(constraints, "|");
-		 while (st.hasMoreTokens()) {
-			 Log.i("ACW",st.nextToken());
-	     }
-		 
-	     
-	
 		MainActivity.this.ExpAdapter.getFilter().filter(constraints);
 	}
 
@@ -279,7 +282,7 @@ public class MainActivity extends ActionBarActivity {
 				phoneView.setText(child.phone);
 				weekdayHoursView.setText(child.weekday_hours);
 				ratingView.setText("rating: " + child.rating.toString() + "/5");
-				priceView.setText(child.price.toString() + "/5");
+				priceView.setText("price: " + child.price.toString() + "/5");
 				
 				// TODO Auto-generated method stub
 				return view;
@@ -348,7 +351,13 @@ public class MainActivity extends ActionBarActivity {
 		            @Override
 		            protected FilterResults performFiltering(CharSequence constraint) {
 		            	groups = ExpListItems;
-		                FilterResults results = new FilterResults();
+		            	 FilterResults results = new FilterResults();
+		            	if(constraint.toString().contains("all")){
+		            		 results.count = groups.size();
+				             results.values = groups;				             
+				             return results;
+		            	}
+		               
 		                ArrayList<ExpandListGroup> FilteredArrayNames = new ArrayList<ExpandListGroup>();
 
 		                // perform a search
@@ -397,7 +406,7 @@ public class MainActivity extends ActionBarActivity {
 
 		                results.count = FilteredArrayNames.size();
 		                results.values = FilteredArrayNames;
-		                Log.e("VALUES", results.values.toString());
+		               
 
 		                return results;
 		            }
