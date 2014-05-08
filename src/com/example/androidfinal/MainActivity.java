@@ -43,7 +43,6 @@ public class MainActivity extends ActionBarActivity {
 		mContext = this;
 		ExpListItems = new ArrayList<ExpandListGroup>();
 		progressSpinner = (ProgressBar) findViewById(R.id.progressSpinner);
-		progressSpinner.setVisibility(View.VISIBLE);
 		new loadJobsTask().execute();
 		
 		Button searchButton = (Button) findViewById(R.id.GO);
@@ -280,9 +279,12 @@ public class MainActivity extends ActionBarActivity {
 				phoneView.setText(child.phone);
 				weekdayHoursView.setText(child.weekday_hours);
 				ratingView.setText("rating: " + child.rating.toString() + "/5");
-				String dollarSigns = "$"; 
+				String dollarSigns = ""; 
 				for(int i = 0; i < child.price; i++){
 					dollarSigns += "$";
+				}
+				if(child.price == 0 ){
+					dollarSigns = "free!";
 				}
 				priceView.setText("price: " + dollarSigns);
 				
@@ -375,7 +377,6 @@ public class MainActivity extends ActionBarActivity {
 
 		            @Override
 		            protected FilterResults performFiltering(CharSequence constraint) {
-		            	showLoading();
 		            	groups = ExpListItems;
 		            	 FilterResults results = new FilterResults();
 		            	if(constraint.toString().contains("all")){
@@ -432,8 +433,7 @@ public class MainActivity extends ActionBarActivity {
 
 		                results.count = FilteredArrayNames.size();
 		                results.values = FilteredArrayNames;
-		               
-		                stopLoading();
+		
 		                return results;
 		            }
 
@@ -447,12 +447,6 @@ public class MainActivity extends ActionBarActivity {
 			
 		}
 		
-		private void showLoading() {
-			
-		}
-
-		private void stopLoading() {
-			progressSpinner.setVisibility(View.GONE);
-		}
+	
 
 }

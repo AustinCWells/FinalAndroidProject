@@ -8,18 +8,16 @@
         android:id="@+id/anchorView"
         android:layout_width="1dip"
         android:layout_height="match_parent"
-        android:layout_alignBottom="@+id/eventsOption"
-        android:layout_centerInParent="true"
-        />
+        android:layout_alignBottom="@+id/priceOption"
+        android:layout_centerInParent="true" />
 
     <TextView
         android:id="@+id/coffeeText"
-         style="@style/text"
+        style="@style/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/anchorView"
-        android:text="@string/coffeeText"
-		/>
+        android:text="@string/coffeeText" />
 
     <Switch
         android:id="@+id/coffeeOption"
@@ -30,7 +28,7 @@
 
     <TextView
         android:id="@+id/foodText"
-         style="@style/text"
+        style="@style/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/coffeeOption"
@@ -42,12 +40,12 @@
         style="@style/toggle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/coffeeOption" 
-         android:layout_alignParentRight="true"/>
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/coffeeOption" />
 
     <TextView
         android:id="@+id/chainText"
-         style="@style/text"
+        style="@style/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/chainText" />
@@ -61,7 +59,7 @@
 
     <TextView
         android:id="@+id/wifiText"
-         style="@style/text"
+        style="@style/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/chainOption"
@@ -77,7 +75,7 @@
 
     <TextView
         android:id="@+id/eventsText"
-         style="@style/text"
+        style="@style/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/wifiOption"
@@ -88,27 +86,57 @@
         style="@style/toggle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/wifiOption" 
-        android:layout_toLeftOf="@id/anchorView"/>
+        android:layout_below="@id/wifiOption"
+        android:layout_toLeftOf="@id/anchorView" />
+
+    <TextView
+        android:id="@+id/atmosphereText"
+        style="@style/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eventsOption"
+        android:paddingTop="10dip"
+        android:text="@string/atmosphereText" />
 
     <Spinner
         android:id="@+id/atmosphereOption"
-        android:layout_width="match_parent"
+        android:layout_width="200dip"
         android:layout_height="wrap_content"
-        android:layout_below="@id/eventsOption" 
-        android:entries="@array/atmosphere"/>
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/eventsOption"
+        android:entries="@array/atmosphere" />
+
+    <TextView
+        android:id="@+id/ratingText"
+        style="@style/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/atmosphereOption"
+        android:paddingTop="10dip"
+        android:text="@string/ratingText" />
 
     <Spinner
         android:id="@+id/ratingOption"
-        android:layout_width="match_parent"
+        android:layout_width="200dip"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_below="@id/atmosphereOption"
         android:entries="@array/rating" />
 
+    <TextView
+        android:id="@+id/priceText"
+        style="@style/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ratingOption"
+          android:paddingTop="10dip"
+        android:text="@string/priceText" />
+
     <Spinner
         android:id="@+id/priceOption"
-        android:layout_width="match_parent"
+        android:layout_width="200dip"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_below="@id/ratingOption"
         android:entries="@array/cost" />
 

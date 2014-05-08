@@ -16,6 +16,9 @@
     <string name="wifiText"> Wifi </string>
     <string name="all">All Locations</string>
     <string name="eventsText"> Events </string>
+    <string name="atmosphereText">Atmosphere</string>
+    <string name="ratingText">Rating</string>
+    <string name="priceText">Price</string>
     <color name="Black">#FF000000</color>
       <color name="White">#FFFFFFFF</color>
     <color name="ExpandChildBackground">#F6A84E</color>
