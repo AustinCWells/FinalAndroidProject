@@ -1257,8 +1257,9 @@ containing a value of this type.
     public static final class menu {
         public static final int display_locations=0x7f0d0000;
         public static final int main=0x7f0d0001;
-        public static final int options_picker=0x7f0d0002;
-        public static final int select_options=0x7f0d0003;
+        public static final int main_menu=0x7f0d0002;
+        public static final int options_picker=0x7f0d0003;
+        public static final int select_options=0x7f0d0004;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1311,6 +1312,7 @@ containing a value of this type.
         public static final int eventsText=0x7f0a001a;
         public static final int foodText=0x7f0a0016;
         public static final int hello_world=0x7f0a0013;
+        public static final int name=0x7f0a001e;
         public static final int options=0x7f0a0011;
         public static final int priceText=0x7f0a001d;
         public static final int ratingText=0x7f0a001c;

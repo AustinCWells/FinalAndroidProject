@@ -23,5 +23,5 @@
       <color name="White">#FFFFFFFF</color>
     <color name="ExpandChildBackground">#F6A84E</color>
     <color name="ExpandGroupBackground">#D3524A</color>
-
+	<string name="name">Developer: Austin Wells </string>
 </resources>
