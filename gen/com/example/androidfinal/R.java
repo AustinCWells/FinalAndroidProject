@@ -1089,8 +1089,8 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020057;
     }
     public static final class id {
-        public static final int ExpList=0x7f050040;
-        public static final int GO=0x7f05003e;
+        public static final int ExpList=0x7f05003f;
+        public static final int GO=0x7f05003d;
         public static final int action_bar=0x7f05001c;
         public static final int action_bar_activity_content=0x7f050015;
         public static final int action_bar_container=0x7f05001b;
@@ -1136,7 +1136,7 @@ containing a value of this type.
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
         public static final int middle=0x7f050012;
-        public static final int myListView=0x7f05003d;
+        public static final int myListView=0x7f050040;
         public static final int name=0x7f050041;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
@@ -1144,7 +1144,7 @@ containing a value of this type.
         public static final int phone=0x7f050043;
         public static final int price=0x7f050046;
         public static final int priceOption=0x7f050055;
-        public static final int progressSpinner=0x7f05003f;
+        public static final int progressSpinner=0x7f05003e;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
@@ -1227,13 +1227,12 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
-        public static final int activity_display_locations=0x7f030018;
-        public static final int activity_main=0x7f030019;
-        public static final int expandlist_child_item=0x7f03001a;
-        public static final int expandlist_group_item=0x7f03001b;
-        public static final int location_item=0x7f03001c;
-        public static final int options_picker=0x7f03001d;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
+        public static final int activity_main=0x7f030018;
+        public static final int expandlist_child_item=0x7f030019;
+        public static final int expandlist_group_item=0x7f03001a;
+        public static final int location_item=0x7f03001b;
+        public static final int options_picker=0x7f03001c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
     }
     public static final class menu {
         public static final int display_locations=0x7f0d0000;

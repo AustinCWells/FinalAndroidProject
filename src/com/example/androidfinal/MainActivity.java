@@ -1,6 +1,7 @@
 package com.example.androidfinal;
 
 import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -16,11 +17,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
 import android.widget.ExpandableListView;
-import android.widget.ListView;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -55,16 +56,7 @@ public class MainActivity extends ActionBarActivity {
 		
     }
     
-    public void SetStandardGroups() {
-    	
-
-    	ExpListItems.add(new ExpandListGroup(new Location("name","address","phone","weekhours","weekendhours",1,2,true,true,true,true,true,"awesome")));
-    	ExpListItems.add(new ExpandListGroup(new Location("name2","address2","phone","weekhours","weekendhours",1,2,true,true,true,true,true,"awesome")));
-    	ExpListItems.add(new ExpandListGroup(new Location("name3","address3","phone","weekhours","weekendhours",1,2,true,true,true,true,true,"awesome")));
-        
-    
-        return;
-    }
+ 
 	
 	private void loadOptions(){
 		 OptionsPicker.createAndShow(getFragmentManager());
@@ -92,7 +84,17 @@ public class MainActivity extends ActionBarActivity {
 	
 	public void onOptionsSelected(Boolean chain, Boolean wifi, Boolean events, Boolean coffee, Boolean food, Integer cost, String atmosphere, Integer rating){
 		Log.i("ACW","on options selected" + chain.toString() + wifi.toString() + events.toString() + food.toString() + cost.toString() + atmosphere.toString() + rating.toString());
-
+		String constraints = chain.toString() + "|" + wifi.toString() + "|" + events.toString() + "|" + food.toString() + "|" + cost.toString() + "|" + atmosphere.toString() + "|" + rating.toString();
+		
+		
+		StringTokenizer st = new StringTokenizer(constraints, "|");
+		 while (st.hasMoreTokens()) {
+			 Log.i("ACW",st.nextToken());
+	     }
+		 
+	     
+	
+		MainActivity.this.ExpAdapter.getFilter().filter(constraints);
 	}
 
 	
@@ -146,7 +148,7 @@ public class MainActivity extends ActionBarActivity {
 	    }
 	    
 	    private String getJobsString() {
-	    	return "[{\"name\":\"CrookedTreeCoffeehouse\",\"address\":\"2414RouthSt,Dallas,TX75201\",\"phone\":\"(214)952-1142\",\"weekday_hours\":\"6:00am-11:00pm\",\"weekend_hours\":\"7:00am-12:00am\",\"rating\":4.5,\"price\":2,\"coffee\":true,\"food\":true,\"chain\":false,\"wifi\":true,\"events\":true,\"atmosphere\":\"cozy\"},{\"name\":\"MurrayStreetCoffeeShop\",\"address\":\"103MurrayStDallasTX75226\",\"phone\":\"(214)655-2808\",\"weekday_hours\":\"7:00am-7:00pm\",\"weekend_hours\":\"closed\",\"rating\":4.4,\"price\":2,\"coffee\":true,\"food\":true,\"chain\":false,\"wifi\":true,\"events\":true,\"atmosphere\":\"modern\"},{\"name\":\"klydewarrenpark\",\"address\":\"2012WoodallRodgersFwyDallasTX75201\",\"phone\":\"(214)716-4500\",\"weekday_hours\":\"6:00am-11:00pm\",\"weekend_hours\":\"6:00am-11:00pm\",\"rating\":4.6,\"price\":0,\"coffee\":false,\"food\":true,\"chain\":false,\"wifi\":false,\"events\":true,\"atmosphere\":\"outdoors\"}]";
+	    	return "[{\"name\":\"Crooked Tree Coffeehouse\",\"address\":\"2414RouthSt,Dallas,TX75201\",\"phone\":\"(214)952-1142\",\"weekday_hours\":\"6:00am-11:00pm\",\"weekend_hours\":\"7:00am-12:00am\",\"rating\":4.5,\"price\":2,\"coffee\":true,\"food\":true,\"chain\":false,\"wifi\":true,\"events\":true,\"atmosphere\":\"cozy\"},{\"name\":\"Murray Street Coffee Shop\",\"address\":\"103MurrayStDallasTX75226\",\"phone\":\"(214)655-2808\",\"weekday_hours\":\"7:00am-7:00pm\",\"weekend_hours\":\"closed\",\"rating\":4.4,\"price\":2,\"coffee\":true,\"food\":true,\"chain\":false,\"wifi\":true,\"events\":true,\"atmosphere\":\"modern\"},{\"name\":\"Klyde Warren Park\",\"address\":\"2012WoodallRodgersFwyDallasTX75201\",\"phone\":\"(214)716-4500\",\"weekday_hours\":\"6:00am-11:00pm\",\"weekend_hours\":\"6:00am-11:00pm\",\"rating\":4.6,\"price\":0,\"coffee\":false,\"food\":true,\"chain\":false,\"wifi\":false,\"events\":true,\"atmosphere\":\"outdoors\"}]";
 	    }
 	    
 	  
@@ -200,58 +202,6 @@ public class MainActivity extends ActionBarActivity {
 	  	}
   }
 	  
-		public class LocationsAdapter extends ArrayAdapter<MainActivity.Location>{
-			private ArrayList<MainActivity.Location> locations;
-			private Context context;
-			public LocationsAdapter(Context context, ArrayList<MainActivity.Location> locations){
-				
-				super(context, R.layout.location_item, locations); 
-				this.locations = locations;
-				this.context = context; 
-				 
-		
-			}
-			
-			@Override 
-			public View getView(final int position, View convertView, ViewGroup parent) {
-				
-				View v;
-				if (convertView == null) {
-					LayoutInflater inflater = LayoutInflater.from(context); 
-					v = inflater.inflate(R.layout.location_item, null); 
-					
-				} else {
-					v = convertView;
-				}
-				
-				TextView nameView = (TextView) v.findViewById(R.id.name);
-				TextView addressView = (TextView) v.findViewById(R.id.address);
-				TextView phoneView = (TextView) v.findViewById(R.id.phone);
-				TextView weekdayHoursView = (TextView) v.findViewById(R.id.weekday_hours);
-				TextView ratingView = (TextView) v.findViewById(R.id.rating);
-				TextView priceView = (TextView) v.findViewById(R.id.price);
-		
-				 
-				MainActivity.Location currentLocation = locations.get(position); 
-				
-				nameView.setText("Name: " + currentLocation.name);
-				addressView.setText("Addres: " + currentLocation.address);
-				phoneView.setText("Phone: " + currentLocation.phone);
-				weekdayHoursView.setText("Weekday Hours: " + currentLocation.weekday_hours);
-				ratingView.setText("Rating: " + currentLocation.rating.toString() + "/5");
-				priceView.setText("Price: " + currentLocation.price.toString() + "/5");
-				
-				
-				
-				
-				return v;
-				
-			}
-		}
-		
-
-		
-
 	
 		public class ExpandListGroup {
 		 
@@ -280,7 +230,7 @@ public class MainActivity extends ActionBarActivity {
 		}
 		
 	
-		public class ExpandListAdapter extends BaseExpandableListAdapter {
+		public class ExpandListAdapter extends BaseExpandableListAdapter implements Filterable {
 
 			private Context context;
 			private ArrayList<ExpandListGroup> groups;
@@ -383,13 +333,60 @@ public class MainActivity extends ActionBarActivity {
 				// TODO Auto-generated method stub
 				return 1;
 			}
+			
+			@Override
+		    public Filter getFilter() {
 
+		        Filter filter = new Filter() {
+
+		            @SuppressWarnings("unchecked")
+		            @Override
+		            protected void publishResults(CharSequence constraint, FilterResults results) {
+
+		            	 groups = ( ArrayList<ExpandListGroup>) results.values;
+		                notifyDataSetChanged();
+		            }
+
+		            @Override
+		            protected FilterResults performFiltering(CharSequence constraint) {
+		            	groups = ExpListItems;
+		                FilterResults results = new FilterResults();
+		                ArrayList<ExpandListGroup> FilteredArrayNames = new ArrayList<ExpandListGroup>();
+
+		                // perform a search
+		               
+		        		StringTokenizer st = new StringTokenizer(constraint.toString(), "|");
+		        		Boolean isChain = Boolean.valueOf(st.nextToken()); 
+		        		Boolean hasWifi = Boolean.valueOf(st.nextToken());
+		        		Boolean hasEvents = Boolean.valueOf(st.nextToken());
+		        		Boolean hasFood = Boolean.valueOf(st.nextToken());
+		        		Integer cost = Integer.valueOf(st.nextToken()); 
+		        		String atmosphere = st.nextToken(); 
+		        		Integer rating = Integer.valueOf(st.nextToken());
+		                
+		                
+		                constraint = constraint.toString().toLowerCase();
+		                for (int i = 0; i < groups.size(); i++) {
+		                	ExpandListGroup groupItem = groups.get(i);
+		                	Location location = groupItem.getLocation();
+		                    if (location.isChain == isChain && location.hasWifi == hasWifi && location.hasEvents == hasEvents && location.hasFood == hasFood)  {
+		                        FilteredArrayNames.add(groupItem);
+		                    }
+		                }
+
+		                results.count = FilteredArrayNames.size();
+		                results.values = FilteredArrayNames;
+		                Log.e("VALUES", results.values.toString());
+
+		                return results;
+		            }
+
+				
+		        };
+
+		        return (android.widget.Filter) filter;
+		    }
+			
+			
 		}
-
-
-
-
-
-
-
 }

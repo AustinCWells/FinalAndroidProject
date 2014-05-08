@@ -96,7 +96,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/eventsOption" 
-        android:entries="@array/cost"/>
+        android:entries="@array/atmosphere"/>
 
     <Spinner
         android:id="@+id/ratingOption"
@@ -110,6 +110,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/ratingOption"
-        android:entries="@array/atmosphere" />
+        android:entries="@array/cost" />
 
 </RelativeLayout>
