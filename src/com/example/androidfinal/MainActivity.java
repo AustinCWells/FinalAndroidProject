@@ -32,8 +32,8 @@ import android.widget.TextView;
 public class MainActivity extends ActionBarActivity {
 	private ArrayList<ExpandListGroup> ExpListItems;
 	private ExpandListAdapter ExpAdapter;
-	
 	private ExpandableListView ExpandList;
+	private ProgressBar progressSpinner;
 	Context mContext;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,8 @@ public class MainActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_main);
 		mContext = this;
 		ExpListItems = new ArrayList<ExpandListGroup>();
-		
+		progressSpinner = (ProgressBar) findViewById(R.id.progressSpinner);
+		progressSpinner.setVisibility(View.VISIBLE);
 		new loadJobsTask().execute();
 		
 		Button searchButton = (Button) findViewById(R.id.GO);
@@ -51,10 +52,7 @@ public class MainActivity extends ActionBarActivity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(android.content.Intent.ACTION_VIEW, 
-					    Uri.parse("http://maps.google.com/maps?saddr=129OakleafDr"));
-					startActivity(intent);
-				//MainActivity.this.ExpAdapter.getFilter().filter("all");
+				MainActivity.this.ExpAdapter.getFilter().filter("all");
 			}
 		});
 		searchButton.setOnClickListener(new View.OnClickListener() {
@@ -282,9 +280,36 @@ public class MainActivity extends ActionBarActivity {
 				phoneView.setText(child.phone);
 				weekdayHoursView.setText(child.weekday_hours);
 				ratingView.setText("rating: " + child.rating.toString() + "/5");
-				priceView.setText("price: " + child.price.toString() + "/5");
+				String dollarSigns = "$"; 
+				for(int i = 0; i < child.price; i++){
+					dollarSigns += "$";
+				}
+				priceView.setText("price: " + dollarSigns);
 				
-				// TODO Auto-generated method stub
+				final String statAddress = child.address;
+				addressView.setOnClickListener(new View.OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						Intent intent = new Intent(android.content.Intent.ACTION_VIEW, 
+							    Uri.parse("http://maps.google.com/maps?saddr=&daddr=" + statAddress));
+							startActivity(intent);
+						
+					}
+				});
+				String posted_by = child.phone;
+				final String uri = "tel:" + posted_by.trim() ;
+				phoneView.setOnClickListener(new View.OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						 Intent intent = new Intent(Intent.ACTION_DIAL);
+						 intent.setData(Uri.parse(uri));
+						 startActivity(intent);
+						
+					}
+				});
+				
 				return view;
 			}
 
@@ -350,6 +375,7 @@ public class MainActivity extends ActionBarActivity {
 
 		            @Override
 		            protected FilterResults performFiltering(CharSequence constraint) {
+		            	showLoading();
 		            	groups = ExpListItems;
 		            	 FilterResults results = new FilterResults();
 		            	if(constraint.toString().contains("all")){
@@ -407,16 +433,26 @@ public class MainActivity extends ActionBarActivity {
 		                results.count = FilteredArrayNames.size();
 		                results.values = FilteredArrayNames;
 		               
-
+		                stopLoading();
 		                return results;
 		            }
 
 				
+				
 		        };
-
+		        
 		        return (android.widget.Filter) filter;
 		    }
 			
 			
 		}
+		
+		private void showLoading() {
+			
+		}
+
+		private void stopLoading() {
+			progressSpinner.setVisibility(View.GONE);
+		}
+
 }

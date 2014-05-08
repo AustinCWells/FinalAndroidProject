@@ -1258,7 +1258,6 @@ containing a value of this type.
         public static final int select_options=0x7f0d0003;
     }
     public static final class string {
-        public static final int JSON=0x7f0a0012;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abc_action_bar_home_description=0x7f0a0001;
@@ -1300,19 +1299,19 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int action_settings=0x7f0a000f;
-        public static final int all=0x7f0a001a;
+        public static final int all=0x7f0a0019;
         public static final int app_name=0x7f0a000d;
         public static final int atmo=0x7f0a000e;
-        public static final int chainText=0x7f0a0018;
-        public static final int coffeeText=0x7f0a0016;
-        public static final int eventsText=0x7f0a001b;
-        public static final int foodText=0x7f0a0017;
-        public static final int hello_world=0x7f0a0014;
+        public static final int chainText=0x7f0a0017;
+        public static final int coffeeText=0x7f0a0015;
+        public static final int eventsText=0x7f0a001a;
+        public static final int foodText=0x7f0a0016;
+        public static final int hello_world=0x7f0a0013;
         public static final int options=0x7f0a0011;
-        public static final int title_activity_display_locations=0x7f0a0013;
-        public static final int title_activity_options_picker=0x7f0a0015;
+        public static final int title_activity_display_locations=0x7f0a0012;
+        public static final int title_activity_options_picker=0x7f0a0014;
         public static final int title_activity_select_options=0x7f0a0010;
-        public static final int wifiText=0x7f0a0019;
+        public static final int wifiText=0x7f0a0018;
     }
     public static final class style {
         /** 

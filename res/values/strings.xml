@@ -5,54 +5,8 @@
     <string name="atmo">Atmosphere</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_select_options">SelectOptions</string>
-    <string name="options">Options</string>
-    <string name="JSON">[
-    {
-        \"name\": \"Crooked Tree Coffeehouse\",
-        \"address\": \"2414 Routh St, Dallas, TX 75201\",
-        \"phone\": \"(214) 952-1142\",
-        \"weekday_hours\": \" 6:00am-11:00pm\",
-        \"weekend_hours\": \"7:00am-12:00am\",
-        \"rating\": 4.5,
-        \"price\": 2,
-        \"coffee\": true,
-        \"food\": true,
-        \"chain\": false,
-        \"wifi\": true,
-        \"events\": true,
-        \"atmosphere\": \"cozy\"
-    },
-    {
-        \"name\": \"MurrayStreetCoffeeShop\",
-        \"address\": \"103MurraySt Dallas TX75226\",
-        \"phone\": \"(214)655-2808\",
-        \"weekday_hours\": \"7: 00am-7: 00pm\",
-        \"weekend_hours\": \"closed\",
-        \"rating\": 4.4,
-        \"price\": 2,
-        \"coffee\": true,
-        \"food\": true,
-        \"chain\": false,
-        \"wifi\": true,
-        \"events\": true,
-        \"atmosphere\": \"modern\"
-    },
-    {
-        \"name\": \"klydewarrenpark\",
-        \"address\": \"2012WoodallRodgersFwy Dallas TX75201\",
-        \"phone\": \"(214)716-4500\",
-        \"weekday_hours\": \"6: 00am-11: 00pm\",
-        \"weekend_hours\": \"6: 00am-11: 00pm\",
-        \"rating\": 4.6,
-        \"price\": 0,
-        \"coffee\": false,
-        \"food\": true,
-        \"chain\": false,
-        \"wifi\": false,
-        \"events\": true,
-        \"atmosphere\": \"outdoors\"
-    }
-]</string>
+    <string name="options">Preferences</string>
+ 
     <string name="title_activity_display_locations">DisplayLocations</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_options_picker">OptionsPicker</string>
