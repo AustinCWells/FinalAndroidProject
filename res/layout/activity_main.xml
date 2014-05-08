@@ -3,33 +3,34 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFF26149"
     tools:context="com.example.androidfinal.MainActivity"
     tools:ignore="MergeRootFrame" >
-    
-    <Button 
+
+    <Button
         android:id="@+id/GO"
-         android:layout_width="match_parent"
-    	android:layout_height="wrap_content"
-    	android:layout_alignParentTop="true"
-    	android:text="@string/options"/>
-    
- 	<ProgressBar 
- 	    android:id="@+id/progressSpinner"
- 	    android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
-    	android:layout_centerInParent="true"/>
-    	<ExpandableListView 
-    	    android:id="@+id/ExpList"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:groupIndicator="@null"
-    android:layout_below="@id/GO" ></ExpandableListView>
-        <ListView 
-        android:id="@+id/myListView"
-         android:layout_width="match_parent"
-    	android:layout_height="match_parent"
-    	android:layout_below="@id/ExpList"
-        ></ListView>
-    
-    
-    </RelativeLayout>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/options" />
+
+    <ProgressBar
+        android:id="@+id/progressSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+   
+
+        <ExpandableListView
+            android:id="@+id/ExpList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             android:layout_below="@id/GO"
+            android:groupIndicator="@null"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="00.0sp" >
+        </ExpandableListView>
+
+
+</RelativeLayout>

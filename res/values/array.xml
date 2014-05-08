@@ -8,6 +8,7 @@
     </string-array>
     
     <string-array name="cost">
+        <item>no preference</item>
         <item>$</item>
         <item>$$</item>
         <item>$$$</item>
@@ -16,12 +17,16 @@
      </string-array>
      
     <string-array name="atmosphere">
+        <item>no preference</item>
         <item>cozy</item>
         <item>modern</item>
         <item>outdoors</item>
+        <item>restaurant</item>
+        <item>busy</item>
     </string-array>
     
     <string-array name="rating">
+        <item>no preference</item>
         <item>★☆☆☆</item>
         <item>★★☆☆</item>
         <item>★★★☆</item>

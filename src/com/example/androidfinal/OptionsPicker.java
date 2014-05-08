@@ -82,7 +82,7 @@ public class OptionsPicker extends DialogFragment implements DialogInterface.OnC
         	events = eventsSwitch.isChecked();
         	coffee = coffeeSwitch.isChecked();
         	food = foodSwitch.isChecked();
-        	price = priceSpinner.getSelectedItemPosition() + 1; 
+        	price = priceSpinner.getSelectedItemPosition(); 
         	rating = ratingSpinner.getSelectedItemPosition() + 1;
         	atmosphere = atmosphereSpinner.getSelectedItem().toString();
             

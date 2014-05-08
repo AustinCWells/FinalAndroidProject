@@ -62,7 +62,7 @@
     <string name="wifiText"> Wifi </string>
     <string name="eventsText"> Events </string>
     <color name="Black">#FFFFFFFF</color>
-    <color name="ExpandChildBackground">#FFAFABAB</color>
-    <color name="ExpandGroupBackground">#FF7C7C7C</color>
+    <color name="ExpandChildBackground">#FF7997B2</color>
+    <color name="ExpandGroupBackground">#FF3A5276</color>
 
 </resources>

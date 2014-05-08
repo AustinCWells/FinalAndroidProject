@@ -148,9 +148,8 @@ public class MainActivity extends ActionBarActivity {
 	    }
 	    
 	    private String getJobsString() {
-	    	return "[{\"name\":\"Crooked Tree Coffeehouse\",\"address\":\"2414RouthSt,Dallas,TX75201\",\"phone\":\"(214)952-1142\",\"weekday_hours\":\"6:00am-11:00pm\",\"weekend_hours\":\"7:00am-12:00am\",\"rating\":4.5,\"price\":2,\"coffee\":true,\"food\":true,\"chain\":false,\"wifi\":true,\"events\":true,\"atmosphere\":\"cozy\"},{\"name\":\"Murray Street Coffee Shop\",\"address\":\"103MurrayStDallasTX75226\",\"phone\":\"(214)655-2808\",\"weekday_hours\":\"7:00am-7:00pm\",\"weekend_hours\":\"closed\",\"rating\":4.4,\"price\":2,\"coffee\":true,\"food\":true,\"chain\":false,\"wifi\":true,\"events\":true,\"atmosphere\":\"modern\"},{\"name\":\"Klyde Warren Park\",\"address\":\"2012WoodallRodgersFwyDallasTX75201\",\"phone\":\"(214)716-4500\",\"weekday_hours\":\"6:00am-11:00pm\",\"weekend_hours\":\"6:00am-11:00pm\",\"rating\":4.6,\"price\":0,\"coffee\":false,\"food\":true,\"chain\":false,\"wifi\":false,\"events\":true,\"atmosphere\":\"outdoors\"}]";
+	    	return "[ { \"name\": \"Crooked Tree Coffeehouse\", \"address\": \"2414 Routh St, Dallas, TX 75201\", \"phone\": \"(214) 952-1142\", \"weekday_hours\": \" 6:00am-11:00pm\", \"weekend_hours\": \"7:00am-12:00am\", \"rating\": 4.5, \"price\": 2, \"coffee\": true, \"food\": true, \"chain\": false, \"wifi\": true, \"events\": true, \"atmosphere\": \"cozy\" }, { \"name\": \"Murray Street Coffee Shop\", \"address\": \"103 MurraySt Dallas TX75226\", \"phone\": \"(214)655-2808\", \"weekday_hours\": \"7: 00am-7: 00pm\", \"weekend_hours\": \"closed\", \"rating\": 4.4, \"price\": 2, \"coffee\": true, \"food\": true, \"chain\": false, \"wifi\": true, \"events\": true, \"atmosphere\": \"modern\" }, { \"name\": \"Klyde Warren Park\", \"address\": \"2012 WoodallRodgersFwy Dallas TX75201\", \"phone\": \"(214)716-4500\", \"weekday_hours\": \"6: 00am-11: 00pm\", \"weekend_hours\": \"6: 00am-11: 00pm\", \"rating\": 4.6, \"price\": 0, \"coffee\": false, \"food\": true, \"chain\": false, \"wifi\": false, \"events\": true, \"atmosphere\": \"outdoors\" }, { \"name\": \"Coffee House Cafe\", \"address\": \"6150 Frankford Rd. Dallas Tx\", \"phone\": \"(469) 248-0554\", \"weekday_hours\": \"7:00 am - 4:00 pm\", \"weekend_hours\": \"7:00 am - 4:00 pm\", \"rating\": 4, \"price\": 2, \"coffee\": true, \"food\": true, \"chain\": false, \"wifi\": true, \"events\": false, \"atmosphere\": \"restaurant\" }, { \"name\": \"Audelia Road Branch Library\", \"address\": \"10045 Audelia Rd Dallas Tx \", \"phone\": \"(214) 670-1350\", \"weekday_hours\": \"12:00pm - 8:00pm\", \"weekend_hours\": \"10:00pm - 6:00pm\", \"rating\": 3.6, \"price\": 0, \"coffee\": false, \"food\": false, \"chain\": false, \"wifi\": true, \"events\": true, \"atmosphere\": \"modern\" }, { \"name\": \"Half Price Books\", \"address\": \"5803 E Northwest Hwy, Dallas, Tx 75231\", \"phone\": \"(214) 379-8000\", \"weekday_hours\": \"9:00am - 11:00pm\", \"weekend_hours\": \"9:00am-11: 00pm\", \"rating\": 4.4, \"price\": 1, \"coffee\": true, \"food\": false, \"chain\": true, \"wifi\": true, \"events\": false, \"atmosphere\": \"busy\" }, { \"name\": \"FlyingHorseCage-LiquidCulture\", \"address\": \"1401ACommerceSt.DallasTx75201\", \"phone\": \"(214)741-1731\", \"weekday_hours\": \"8: 00am-9: 00pm\", \"weekend_hours\": \"7: 00am-8: 00pm\", \"rating\": 4.5, \"price\": 1, \"coffee\": true, \"food\": false, \"chain\": false, \"wifi\": true, \"events\": true, \"atmosphere\": \"cozy\" }, { \"name\": \"OakLawnCoffee\", \"address\": \"2720OakLawnAve\", \"phone\": \"2720OakLawnAve\", \"weekday_hours\": \"6: 00am-9: 00pm\", \"weekend_hours\": \"10: 00am-5: 00pm\", \"rating\": 4.3, \"price\": 1, \"coffee\": true, \"food\": true, \"chain\": false, \"wifi\": true, \"events\": false, \"atmosphere\": \"modern\" }, { \"name\": \"TheWildDetectives\", \"address\": \"314W8thSt.DallasTX75208\", \"phone\": \"(214)942-0108\", \"weekday_hours\": \"9: 00am-12: 00am\", \"weekend_hours\": \"9: 00am-6: 00pm\", \"rating\": 5, \"price\": 1, \"coffee\": true, \"food\": true, \"chain\": false, \"wifi\": true, \"events\": true, \"atmosphere\": \"busy\" }, { \"name\": \"Mudsmith\", \"address\": \"2114GreenvilleAve\", \"phone\": \"(214)370-9535\", \"weekday_hours\": \"7: 00am-9: 00pm\", \"weekend_hours\": \"7: 00am-8: 00pm\", \"rating\": 4.4, \"price\": 2, \"coffee\": true, \"food\": true, \"chain\": true, \"wifi\": true, \"events\": true, \"atmosphere\": \"modern\" }, { \"name\": \"VelvetTaco\", \"address\": \"3012NHendersonAve\", \"phone\": \"(214)823-8358\", \"weekday_hours\": \"7: 00am-11: 00pm\", \"weekend_hours\": \"7: 00am-11: 00pm\", \"rating\": 4, \"price\": 1, \"coffee\": true, \"food\": true, \"chain\": true, \"wifi\": true, \"events\": false, \"atmosphere\": \"busy\" }, { \"name\": \"CafeBrownSugar\", \"address\": \"2625OldDentonRd.\", \"phone\": \"(972)446-6633\", \"weekday_hours\": \"6: 00am-7: 00pm\", \"weekend_hours\": \"6: 00am-5: 00pm\", \"rating\": 3.5, \"price\": 2, \"coffee\": true, \"food\": true, \"chain\": true, \"wifi\": true, \"events\": true, \"atmosphere\": \"restaurant\" }, { \"name\": \"BuzzbrewsKitchen\", \"address\": \"4334LemmonAve\", \"phone\": \"(214)521-4344\", \"weekday_hours\": \"24hours\", \"weekend_hours\": \"24hours\", \"rating\": 3.3, \"price\": 1, \"coffee\": true, \"food\": true, \"chain\": true, \"wifi\": true, \"events\": false, \"atmosphere\": \"busy\" }, { \"name\": \"CrookedTreeCoffeehouse\", \"address\": \"2414RouthSt.\", \"phone\": \"(214)952-1142\", \"weekday_hours\": \"7: 00am-9: 00pm\", \"weekend_hours\": \"7: 00am-9: 00pm\", \"rating\": 5, \"price\": 1, \"coffee\": true, \"food\": false, \"chain\": false, \"wifi\": true, \"events\": false, \"atmosphere\": \"Busy\" }, { \"name\": \"DallasHallLawn\", \"address\": \"6024AirlineRoad\", \"phone\": \"(214)768-2000\", \"weekday_hours\": \"24Hours\", \"weekend_hours\": \"24Hours\", \"rating\": 5, \"price\": 0, \"coffee\": false, \"food\": false, \"chain\": false, \"wifi\": false, \"events\": false, \"atmosphere\": \"outdoors\" }, { \"name\": \"MeadowsSchooloftheArts\", \"address\": \"6101BishopBlvd\", \"phone\": \"(214)768-2000\", \"weekday_hours\": \"24Hours\", \"weekend_hours\": \"24Hours\", \"rating\": 5, \"price\": 0, \"coffee\": true, \"food\": true, \"chain\": false, \"wifi\": true, \"events\": true, \"atmosphere\": \"cozy\" } ]";
 	    }
-	    
 	  
 	    
 	   
@@ -267,7 +266,7 @@ public class MainActivity extends ActionBarActivity {
 				}
 				
 				
-				TextView nameView = (TextView) view.findViewById(R.id.name);
+				
 				TextView addressView = (TextView) view.findViewById(R.id.address);
 				TextView phoneView = (TextView) view.findViewById(R.id.phone);
 				TextView weekdayHoursView = (TextView) view.findViewById(R.id.weekday_hours);
@@ -276,12 +275,11 @@ public class MainActivity extends ActionBarActivity {
 				 
 				 
 				
-				nameView.setText("Name: " + child.name);
-				addressView.setText("Addres: " + child.address);
-				phoneView.setText("Phone: " + child.phone);
-				weekdayHoursView.setText("Weekday Hours: " + child.weekday_hours);
-				ratingView.setText("Rating: " + child.rating.toString() + "/5");
-				priceView.setText("Price: " + child.price.toString() + "/5");
+				addressView.setText(child.address);
+				phoneView.setText(child.phone);
+				weekdayHoursView.setText(child.weekday_hours);
+				ratingView.setText("rating: " + child.rating.toString() + "/5");
+				priceView.setText(child.price.toString() + "/5");
 				
 				// TODO Auto-generated method stub
 				return view;
@@ -369,8 +367,31 @@ public class MainActivity extends ActionBarActivity {
 		                for (int i = 0; i < groups.size(); i++) {
 		                	ExpandListGroup groupItem = groups.get(i);
 		                	Location location = groupItem.getLocation();
-		                    if (location.isChain == isChain && location.hasWifi == hasWifi && location.hasEvents == hasEvents && location.hasFood == hasFood)  {
-		                        FilteredArrayNames.add(groupItem);
+		                    if (location.isChain == isChain && location.hasWifi == hasWifi && location.hasEvents == hasEvents && location.hasFood == hasFood )  {
+		                    	
+		                    	// auto set if we're ignoring
+		                    	if(cost == 0) {
+		                    		cost = 5;		
+		                    	} else {
+		                    		cost -= 1; 
+		                    	}
+		                    	
+		                    	if(rating == 1 ){
+		                    		rating = 0; 
+		                    	} else {
+		                    		rating -= 1; 
+		                    	}
+		                    	// ignore atmosphere
+		                    	if(atmosphere.contains("no preference"))
+		                    	{
+		                    		if(location.price < cost && location.rating > rating )
+		                    			FilteredArrayNames.add(groupItem);
+		                    	} else {
+		                    		if ( location.price < cost && location.rating > rating && location.atmosphere.contains(atmosphere))
+		                    			FilteredArrayNames.add(groupItem);
+		                    	}
+		                    	
+		                    	
 		                    }
 		                }
 
